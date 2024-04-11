@@ -22,95 +22,41 @@ Partial Class Kahoot
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.LblQuestion = New System.Windows.Forms.Label()
-        Me.LblTotlPplAns = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnSkip = New System.Windows.Forms.Button()
-        Me.TxtAns1 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.lblTimer = New System.Windows.Forms.Label()
         Me.lblAnswersRight = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ResetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenJson = New System.Windows.Forms.OpenFileDialog()
+        Me.PnlGuessAnswers = New System.Windows.Forms.Panel()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'LblQuestion
         '
+        Me.LblQuestion.BackColor = System.Drawing.Color.WhiteSmoke
         Me.LblQuestion.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblQuestion.Location = New System.Drawing.Point(36, 9)
+        Me.LblQuestion.Location = New System.Drawing.Point(-5, 24)
         Me.LblQuestion.Name = "LblQuestion"
-        Me.LblQuestion.Size = New System.Drawing.Size(1016, 126)
+        Me.LblQuestion.Size = New System.Drawing.Size(1100, 126)
         Me.LblQuestion.TabIndex = 0
-        '
-        'LblTotlPplAns
-        '
-        Me.LblTotlPplAns.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblTotlPplAns.Location = New System.Drawing.Point(971, 200)
-        Me.LblTotlPplAns.Name = "LblTotlPplAns"
-        Me.LblTotlPplAns.Size = New System.Drawing.Size(81, 67)
-        Me.LblTotlPplAns.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(971, 277)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(105, 29)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Answers"
         '
         'BtnSkip
         '
         Me.BtnSkip.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.BtnSkip.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnSkip.Location = New System.Drawing.Point(956, 147)
+        Me.BtnSkip.Location = New System.Drawing.Point(988, 153)
         Me.BtnSkip.Name = "BtnSkip"
         Me.BtnSkip.Size = New System.Drawing.Size(96, 36)
         Me.BtnSkip.TabIndex = 3
         Me.BtnSkip.Text = "Skip"
         Me.BtnSkip.UseVisualStyleBackColor = False
-        '
-        'TxtAns1
-        '
-        Me.TxtAns1.BackColor = System.Drawing.Color.Coral
-        Me.TxtAns1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtAns1.Location = New System.Drawing.Point(3, 317)
-        Me.TxtAns1.Multiline = True
-        Me.TxtAns1.Name = "TxtAns1"
-        Me.TxtAns1.Size = New System.Drawing.Size(531, 127)
-        Me.TxtAns1.TabIndex = 4
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(551, 317)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(525, 127)
-        Me.TextBox1.TabIndex = 5
-        '
-        'TextBox2
-        '
-        Me.TextBox2.BackColor = System.Drawing.Color.PaleTurquoise
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(3, 498)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(531, 127)
-        Me.TextBox2.TabIndex = 6
-        '
-        'TextBox3
-        '
-        Me.TextBox3.BackColor = System.Drawing.Color.MediumPurple
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(551, 498)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(531, 127)
-        Me.TextBox3.TabIndex = 7
         '
         'lblTimer
         '
@@ -122,53 +68,100 @@ Partial Class Kahoot
         '
         'lblAnswersRight
         '
-        Me.lblAnswersRight.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAnswersRight.Location = New System.Drawing.Point(560, 135)
+        Me.lblAnswersRight.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAnswersRight.Location = New System.Drawing.Point(871, 201)
         Me.lblAnswersRight.Name = "lblAnswersRight"
-        Me.lblAnswersRight.Size = New System.Drawing.Size(295, 167)
+        Me.lblAnswersRight.Size = New System.Drawing.Size(206, 94)
         Me.lblAnswersRight.TabIndex = 9
         '
         'Label2
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(377, 147)
+        Me.Label2.Location = New System.Drawing.Point(641, 197)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(224, 143)
+        Me.Label2.Size = New System.Drawing.Size(224, 98)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "Total Correct:"
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(1089, 24)
+        Me.MenuStrip1.TabIndex = 19
+        Me.MenuStrip1.Text = "File"
+        '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenFileToolStripMenuItem, Me.ResetToolStripMenuItem})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem.Text = "&File"
+        '
+        'OpenFileToolStripMenuItem
+        '
+        Me.OpenFileToolStripMenuItem.Name = "OpenFileToolStripMenuItem"
+        Me.OpenFileToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
+        Me.OpenFileToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.OpenFileToolStripMenuItem.Text = "Open"
+        '
+        'ResetToolStripMenuItem
+        '
+        Me.ResetToolStripMenuItem.Name = "ResetToolStripMenuItem"
+        Me.ResetToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2
+        Me.ResetToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
+        Me.ResetToolStripMenuItem.Text = "Reset"
+        '
+        'OpenJson
+        '
+        Me.OpenJson.DefaultExt = "Json"
+        Me.OpenJson.FileName = "OpenFileDialog1"
+        '
+        'PnlGuessAnswers
+        '
+        Me.PnlGuessAnswers.Location = New System.Drawing.Point(46, 311)
+        Me.PnlGuessAnswers.Name = "PnlGuessAnswers"
+        Me.PnlGuessAnswers.Size = New System.Drawing.Size(985, 314)
+        Me.PnlGuessAnswers.TabIndex = 20
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
         '
         'Kahoot
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LightSteelBlue
         Me.ClientSize = New System.Drawing.Size(1089, 637)
+        Me.Controls.Add(Me.PnlGuessAnswers)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.lblAnswersRight)
         Me.Controls.Add(Me.lblTimer)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.TxtAns1)
         Me.Controls.Add(Me.BtnSkip)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.LblTotlPplAns)
         Me.Controls.Add(Me.LblQuestion)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Kahoot"
-        Me.Text = "Form1"
+        Me.Text = "Kahoot"
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents LblQuestion As Label
-    Friend WithEvents LblTotlPplAns As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents BtnSkip As Button
-    Friend WithEvents TxtAns1 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents lblTimer As Label
     Friend WithEvents lblAnswersRight As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OpenFileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OpenJson As OpenFileDialog
+    Friend WithEvents PnlGuessAnswers As Panel
+    Friend WithEvents ResetToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Timer1 As Timer
 End Class

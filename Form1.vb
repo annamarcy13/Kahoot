@@ -1,9 +1,5 @@
 ﻿Public Class Kahoot
-
-
-    Private Sub LblQuestion_Click(sender As Object, e As EventArgs) Handles LblQuestion.Click
-
-
+    Private Sub Kahoot_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class
